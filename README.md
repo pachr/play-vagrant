@@ -3,9 +3,9 @@
 A simple Vagrant config with Play Framework, Ansible and MySQL server that gets you started quickly with a working example. When deployed, the folder structure will look like this: 
 - yourrepo/
   - frameworks/
-      - play-2.2.3/
+      - activator-1.3.10-minimal/
   - project/
-      - example_project
+      - (We will clone & pull our project repo here)
   - provision/
       - templates/
       - ansible_hosts
@@ -16,6 +16,8 @@ A simple Vagrant config with Play Framework, Ansible and MySQL server that gets 
 
 ##Requirements
 
+On your machine, install everything listed below: 
+
 - GIT, Java, ... the basic stuff
 - VirtualBox https://www.virtualbox.org/
 - Vagrant http://www.vagrantup.com/  (ATOW version 1.4.3)
@@ -23,15 +25,33 @@ A simple Vagrant config with Play Framework, Ansible and MySQL server that gets 
 - Some console knowledge :-)
 
 ##Getting Started
+
+  Anywhere on your machine
     
-    git clone git@github.com:torbjokv/play-vagrant.git yourrepo && cd yourrepo && vagrant up
+  ```bash
 
-This takes time. Grab a coffee - or two!
+    $> git clone git@github.com:pachr/play-vagrant.git yourrepo && cd yourrepo && vagrant up
 
-    vagrant ssh -c "cd project && play ~run"
+  ```  
+  *Note : Change yourrepo to something good*
 
-When it's ready, go to your browser and enter http://localhost:9000/ 
-Le voilà!
+This takes time. Grab a beer :beer: - or two! :beers:
+
+  Then
+
+  ```bash
+
+    $> vagrant ssh
+
+  ```    
+
+  Your vagrant box is up and running !
+
+
+We will see how to download our project after  
+
+~~When it's ready, go to your browser and enter http://localhost:9000/~~
+~~Le voilà!~~
 
 ##Tips and tricks
 
@@ -41,7 +61,4 @@ Le voilà!
 
 Vagrant and ansible have good dokumentation at http://docs.vagrantup.com/v2 and http://docs.ansible.com/
 
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/torbjokv/play-vagrant/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/f118040f0d6c51d3d575e3537f2ddddc "githalytics.com")](http://githalytics.com/torbjokv/play-vagrant)
+[Thanks to torbjokv](https://github.com/torbjokv/play-vagrant)
