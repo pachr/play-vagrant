@@ -4,8 +4,8 @@
   vars: 
     mysql_root_password: poo_root
     mysql_project_database: poo_db_playproject
-    mysql_project_user: poo_user_playproject
-    mysql_project_password: poo_password_project
+    mysql_project_user: poo_user
+    mysql_project_password: poo_password
     play_version: 1.3.10
     activator_version: activator-1.3.10-minimal
     typesafe_version: typesafe-activator-1.3.10-minimal
@@ -77,9 +77,6 @@
 
     - name: ensure git is at the latest version
       apt: pkg=git state=latest
-
-    - name: export activator path
-      command: export PATH={{ env_paths }}/bin:$PATH
 
   handlers:
     - name: restart mysql
